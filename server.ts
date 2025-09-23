@@ -8,7 +8,7 @@ import bootstrap from './src/main.server';
 // Express app
 export function app(): express.Express {
   const server = express();
-
+ 
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
