@@ -10,10 +10,15 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/angular-headless-wp/server/server.mjs"
-    }
-  ]
+ "routes": [
+  {
+    "src": "/server/(.*)",
+    "dest": "dist/angular-headless-wp/server/server.mjs"
+  },
+  {
+    "src": "/(.*)",
+    "dest": "dist/angular-headless-wp/browser/$1"
+  }
+]
+
 }
