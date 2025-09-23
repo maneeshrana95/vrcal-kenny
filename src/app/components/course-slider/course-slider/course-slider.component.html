@@ -1,0 +1,54 @@
+
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"  *ngFor="let service of services">
+      <div class="card">
+        <div class="card-img">
+          <a [routerLink]="['/courses', service.slug]">
+             <img *ngIf="service.featuredImage" [src]="service.featuredImage" [alt]="service.title.rendered" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="card-body">
+          <div class="rbt-card-top">
+            <div class="stars">
+              <ul>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+              </ul>
+              
+            </div>
+          </div>
+          <h4  [innerHTML]="service.title.rendered"> </h4>
+          <div class="heightmin">
+          <p>{{ getShortText(service.acf?.banner_desc, 15) }}</p>
+          </div>
+          <!-- <div class="info">
+            <div><i class="fa-solid fa-book"></i>{{ course.lessons }} Lessons</div>
+            <div><i class="fa-solid fa-user-tie"></i>{{ course.students }} Students</div>
+          </div> -->
+          <div class="author">
+            <img src="./images/author.png" alt="Author">
+            <div class="author-info">Course • By Kenny Weiss</div>
+          </div>
+          <div class="price-row">
+            <div class="price">
+              <span class="current-price">$ {{ service.acf?.price }}</span>
+              <span class="original-price">$ {{ service.acf?.cut_price }}</span>
+            </div>
+            <a [routerLink]="['/courses', service.slug]" class="button">
+              Learn More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>

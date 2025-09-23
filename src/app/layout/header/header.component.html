@@ -1,0 +1,72 @@
+<header id="headerbg" class="header blacktext" [class.bgcolor]="bgcolor" [class.homenav]="isHomeOrBlog">
+    <div class="container">
+        <div class="navbars" [class.openmenu]="isMenuOpen" id="nav-menu">
+            <div class="topbar">
+                <div class="logo">
+                    <a routerLink="/" class="logo-brand">
+                        <img src="images/logo.png" loading="lazy" alt="logo">
+                    </a>
+
+                    <div class="flexsocial whitei">
+                        <a target="_blank" href="https://www.facebook.com/kennyweiss.net" class="sociallink"><i
+                                class="fa-brands fa-facebook-f"></i> </a>
+                        <a target="_blank" href="https://www.instagram.com/kennyweiss.kw" class="sociallink"><i
+                                class="fa-brands fa-instagram"></i> </a>
+                        <a target="_blank" href="https://twitter.com/kennyweisskw" class="sociallink"><i
+                                class="fa-brands fa-x-twitter"></i> </a>
+                        <a target="_blank" href="https://www.tiktok.com/@kennyweisskw" class="sociallink"><i
+                                class="fa-brands fa-tiktok"></i> </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC5eK9c7LRJoK6NW52nlythw" class="sociallink"><i
+                                class="fa-brands fa-youtube"></i> </a>
+                    </div>
+                </div>
+
+                <button class="menu-toggle" (click)="toggleMenu()" id="menu-toggle">
+                    <i class="open fa-solid fa-bars"></i>
+                    <i class="close fa-solid fa-xmark"></i>
+                </button>
+            </div>
+  
+            <ul class="navmenu">
+                <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+                </li>
+                <li><a routerLink="/about-kenny-weiss" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Meet Kenny</a></li>
+                <li><a routerLink="/courses" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Courses</a></li>
+                <li><a routerLink="/books-by-kenny-weiss" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Books</a></li>
+
+                <li class="dropreletiv" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }">
+                    <a>Free Resources</a> <i class="fa-solid fa-chevron-down"></i>
+                    <ul class="doropmenu">
+                        <li><a routerLink="/resources" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Resources</a></li>
+                        <li><a routerLink="/best-day-blog" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Blog</a></li>
+                        <li><a routerLink="/podcast" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Podcast</a></li>
+                        <li><a routerLink="/feelings-wheel" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Feelings Wheel</a></li>
+                        <li><a routerLink="/worst-day-cycle" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Worst Day Cycle</a></li>
+                    </ul>
+                </li>
+
+                <li class="mb4"><a routerLink="/contact" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{ exact: true }">Contact</a></li> 
+                        
+                <li><a routerLink="/book-a-session-with-kenny-weiss" class="contact-nav">Book a Session</a></li>
+            </ul>
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</header>

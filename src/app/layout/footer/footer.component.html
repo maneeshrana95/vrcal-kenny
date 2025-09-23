@@ -1,0 +1,37 @@
+<section class="courses-master-classess">
+    <div class="flex-row"><h3>Connect With Kenny</h3></div>
+
+ <div style="margin-top: 20px;" class="elfsight-app-ea19864a-6067-4003-85c9-928116aa744e" data-elfsight-app-lazy></div> 
+
+</section>
+
+
+<footer class="footer">
+   <div class="footer-content">
+        <h5 class="tag-line">Weekly Newsletter</h5>
+        <h3> Get my tips directly into your inbox every Monday morning.</h3> 
+         
+<div *ngIf="messageType === 'success'" class="success-message">
+  {{ message }}
+</div>
+        <form (ngSubmit)="submitSubscribe()" class="newsletter-form" #form="ngForm">
+            <input type="email" name="email" [(ngModel)]="email"     #emailInput="ngModel" placeholder="Enter your e-mail" required />
+         
+            <button type="submit">Subscribe!</button>
+              
+        </form>
+        <div *ngIf="message" [ngClass]="messageType">
+  {{ message }}
+</div>
+
+        <div class="social-icons">
+            <a target="_blank" href="https://www.facebook.com/kennyweiss.net"><i
+                    class="fa-brands fa-facebook-f"></i></a>
+            <a target="_blank" href="https://www.instagram.com/kennyweiss.kw"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" href="https://twitter.com/kennyweisskw"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC5eK9c7LRJoK6NW52nlythw"><i
+                    class="fa-brands fa-youtube"></i></a>
+        </div>
+    </div>
+    <p class="rights-reserved">Copyright © 2025 Kenny Weiss | All Rights Reserved</p>
+</footer>

@@ -1,0 +1,52 @@
+<div *ngIf="loading" class="loader-maim"> 
+<div class="hm-spinner"></div>
+</div>    
+
+<div *ngIf="!loading" class="newblog-post">
+    <div *ngFor="let hservice of healservices">
+        <div class="news-block-two">
+            <div class="inner-box">
+                <div class="image">
+                    <a [routerLink]="['/services', hservice.slug]">
+                        <!-- Agar featured image ho -->
+                        <img
+                            *ngIf="!hservice.courseImage && hservice.featuredImage"
+                            [src]="hservice.featuredImage"
+                            alt="{{ hservice.title?.rendered }}"
+                            loading="lazy">
+                    </a>
+                </div>
+                <div class="lower-content">
+                    <div class="category">Business</div>
+                    <div class="author-box">
+                        <div class="box-inner">
+                            <div class="author-image">
+                                <img src="images/16.jpeg" loading="lazy" alt>
+                            </div>
+                            by <span
+                                [innerHTML]="hservice._embedded?.author[0]?.name"></span>
+
+                        </div>
+                    </div>
+                    <a [routerLink]="['/services', hservice.slug]">
+                        <h3 [innerHTML]="hservice.title.rendered"></h3>
+                    </a>
+                    <div class="text">
+                        <div [innerHTML]="hservice.excerpt.rendered"></div>
+                    </div>
+                    <ul class="post-meta">
+                        <li><span class="icon fa fa-calendar"></span>24th March
+                            2022</li>
+                        <div class="buttonsser">
+                            <a routerLink="/courses" routerLinkActive="active">
+                                See All Courses</a>
+                            <a routerLink="/book-a-session-with-kenny-weiss"
+                                routerLinkActive="active"> Book a Session with
+                                Kenny Weiss</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

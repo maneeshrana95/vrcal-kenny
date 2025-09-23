@@ -1,0 +1,308 @@
+<div *ngIf="loading" class="loader-maim">
+<div class="hm-spinner"></div>
+</div>
+<main *ngIf="!loading" class="pt-1 pt68px coressdetailes">
+    <div class="healing-inner-pages height-7"
+        [style.background-image]="'url(' + backgroundImage + ')'">
+        <div class="container">
+            <div class='courses-details-banner'>
+                <h1 [innerHTML]="service.title.rendered"> </h1>
+                <p>{{ service.acf?.banner_desc }}</p>
+                <a class="button whitebt" [href]="service.acf?.banner_btn_link?.url">Enroll Now !</a>
+            </div>
+        </div>
+    </div>
+    <div class="courses-details-section">
+        <section class="who-we-are bookssection ">
+            <div class="container ">
+                <div class="flex-who-we-are gap3">
+                    <!-- Left Side Images -->
+                    <div class="left-images sticky6">
+                        <div class="main-img">
+                            <img *ngIf="mainImage" [src]="mainImage"
+                                alt="Background Image">
+                        </div>
+                        <div class="video-boxes mt22">
+                            <img *ngIf="videoImage" [src]="videoImage"
+                                alt="Background Image">
+                        </div>
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="right-content homesder aos-init aos-animate"
+                        data-aos="fade-up"
+                        data-aos-duration="1500">
+                        <h5 class="tag-line">Our details</h5>
+                        <h3>{{ service.acf?.main_heading }}</h3>
+                        <div [innerHTML]="service.acf?.paragraphs"></div>
+                        <h4>{{ service.acf?.sub_heading_2 }}</h4>
+                        <div class="button-row left">
+                            <a [href]="service.acf?.cta_url?.url"
+                                class="button mt3">
+                                {{ service.acf?.cta_text }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="videosectionleft mb0">
+            <div class="container">
+                <div class="grid-3-7">
+                    <div class="box3">
+                        <h3>{{ service.acf?.person_heading }}</h3>
+                        <div [innerHTML]="service.acf?.person_quote"></div>
+                    </div>
+                    <div class="Player5">
+                        <div>
+                            <iframe
+                                width="560"
+                                height="315"
+                                *ngIf="videoUrl"
+                                [src]="videoUrl | safeUrl"
+                                frameborder="0"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="who-we-are bookssection secondcard">
+            <div class="container ">
+                <div class="flex-who-we-are">
+                    <!-- Right Side Content -->
+                    <div class="right-content homesder aos-init aos-animate"
+                        data-aos="fade-up"
+                        data-aos-duration="1500">
+                        <h3>{{ service.acf?.right_heading }}</h3>
+                        <h4>{{ service.acf?.sub_heading_1 }}</h4>
+                        <div [innerHTML]="service.acf?.right_para_1"></div>
+                        <div class="button-row left">
+                            <a [href]="service.acf?.right_button_link?.url"
+                                class="button mt3"> {{
+                                service.acf?.right_button_text }}</a>
+                        </div>
+                    </div>
+                    <!-- Left Side Images -->
+                    <div class="left-images sticky6">
+                        <div class="main-img">
+                            <img *ngIf="secondcardleftImage"
+                                [src]="secondcardleftImage"
+                                alt="Background Image">
+                        </div>
+                        <div class="video-boxes">
+                            <img *ngIf="secondcardVedioleftImage"
+                                [src]="secondcardVedioleftImage"
+                                alt="Background Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="videosectionleft ">
+            <div class="container">
+                <div class="grid-3-7 grid-7-3">
+                    <div class="Player5">
+                        <iframe
+                            width="560"
+                            height="315"
+                            *ngIf="introvideoUrl"
+                            [src]="introvideoUrl | safeUrl"
+                            frameborder="0"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="box3">
+                        <h3>{{ service.acf?.video_title}}</h3>
+                        <div [innerHTML]="service.acf?.video_description"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="journey-section">
+            <div class="container">
+                <div class="journey-point">
+                    <!-- Left content -->
+                   <div class="left-box">
+                        <h3>{{ service.acf?.left_title}}</h3>
+                        <p>{{ service.acf?.left_paragraph}}</p>
+                    </div>
+                    <!-- Right benefits list -->
+                    <div class="right-box">
+                        <h4>{{ service.acf?.right_title}}</h4>
+                        <ul class="benefits-list" *ngIf="benefits?.length">
+                            <li *ngFor="let benefit of benefits">{{ benefit
+                                }}</li>
+                        </ul>
+                    </div>
+ <div class="button-row">
+                            <a target="_blank"
+                                [href]="service.acf?.button_link?.url"
+                                class="button mt3"> {{
+                                service.acf?.button_text}}</a>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="Self-love">
+            <div class="container">
+                <div class="your-journey-Self-love">
+                    <div class="positionsticky">
+                        <h3>{{ service.acf?.journey_left_title}}</h3>
+                        <div
+                            [innerHTML]="service.acf?.journey_left_paragraphs"></div>
+                    </div>
+                    <div class="industry-grid" *ngIf="curriculum_list?.length">
+                        <h4>{{ service.acf?.journey_right_title}}</h4>
+                        <div class="industry-card"
+                            *ngFor="let curriculum of curriculum_list">
+                            <span class="icon"><i
+                                    class="fa-solid fa-play"></i></span>
+                            {{ curriculum }}
+                            <a [href]="service.acf?.right_button_link?.url"
+                                class="button ">Start</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="who-we-are bookssection">
+            <div class="container ">
+                <div class="flex-who-we-are">
+                    <!-- Left Side Images -->
+                    <!-- Left Side Images -->
+                    <div class="left-images sticky6">
+                        <div class="main-img">
+                            <img *ngIf="rdVedioleftImage"
+                                [src]="rdVedioleftImage"
+                                alt="Background Image">
+                        </div>
+                        <div class="video-boxes">
+                            <img *ngIf="readyVedioleftImage"
+                                [src]="readyVedioleftImage"
+                                alt="Background Image">
+                        </div>
+                    </div>
+                    <!-- Right Side Content -->
+                    <div class="right-content homesder aos-init aos-animate"
+                        data-aos="fade-up"
+                        data-aos-duration="1500">
+                        <h3>{{ service.acf?.ready_to_take_heading}}</h3>
+                        <div
+                            [innerHTML]="service.acf?.ready_to_take_paragraph"></div>
+                        <div class="button-row left">
+                            <a  
+                                [href]="service.acf?.ready_to_take_button_link?.url"
+                                class="button mt3"> {{
+                                service.acf?.ready_to_take_button_text}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="self-development bg2"
+            style="background-image: url(./images/22.jpg);">
+            <div class="container">
+                <div
+                    class="self-development-content background-attachment aos-init aos-animate"
+                    data-aos="fade-up"
+                    data-aos-duration="1500">
+                    <h3>What Are You Waiting For? </h3>
+                    <p>Complete The Greatest Version Of Yourself by taking one
+                        of our fantastic masterclasses today! </p>
+                    <a class="button whitebt" [href]="service.acf?.ready_to_take_button_link?.url">Enroll Now
+                        !</a>
+                </div>
+            </div>
+        </section>
+        <section class="Self-love faqbg">
+            <div class="container">
+                <div class="your-journey-Self-love frequently">
+                    <div class="positionsticky">
+                        <h3>Frequently Asked Questions</h3>
+                    </div>
+<div class="industry-grid">
+  <div class="faq-wrapper blog-detailsdhidee" *ngIf="faqQ?.length">
+    <div class="faq-item" *ngFor="let faq of faqQ; let i = index">
+      <div class="question" (click)="toggleFaq(i)">
+        {{ faq.question }}
+      </div>
+      <div class="answercont" *ngIf="faq.open">
+        <div class="answer">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </div>
+            </div>
+        </section>
+
+
+ <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                     <h3>Voices of Transformation</h3>
+                    <!-- <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p> -->
+
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                    <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="podcastvideos">
+        <div class="container">
+            <div class="videotestiomonials">
+               <h3>Voices of Transformation</h3>
+                <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p>
+            </div>
+
+            <div class="videorow">
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/OLDAWv1EZx" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/4Rbd6v4KLv" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- <section class="courses-master-classes">
+            <div class="course-heading aos-init aos-animate" data-aos="fade-up"
+                data-aos-duration="1500">
+                <h5 class="tag-line">Learn from me</h5>
+                <h3 class="title">What Are You Waiting For? </h3>
+                <p>Complete The Greatest Version Of Yourself by taking one of
+                    our fantastic masterclasses today!
+                </p>
+            </div>
+            <div class="container">
+                <app-course-slider />
+            </div>
+            <div class="button-row canter">
+                <a routerLink="/courses" class="button">View All Products</a>
+            </div>
+        </section> -->
+    </div>
+</main>

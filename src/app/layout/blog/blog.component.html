@@ -1,0 +1,136 @@
+<div *ngIf="loading" class="loader-maim">
+    <div class="hm-spinner"></div>
+</div>
+
+
+<div class="blog">
+    <main class="mt" *ngIf="!loading">
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="flex-row">
+                    <h5 class="tag-line">Our Blog</h5>
+                    <h3>Latest from the Blog</h3>
+                </div>
+                <div class="flex-blog">
+                    <div class="newblog-post ">
+                        <div *ngFor="let post of posts | paginate: { itemsPerPage: itemsPerPage, currentPage: page }">
+                            <div class="news-block-two">
+                                <div class="inner-box">
+                                    <div class="image">
+                                        <a [routerLink]="['/', post.slug]">
+                                            <!-- Agar featured image ho -->
+                                            <img *ngIf="!post.courseImage && post.featuredImage"
+                                                [src]="post.featuredImage" alt="{{ post.title?.rendered }}"
+                                                loading="lazy">
+                                        </a>
+                                    </div>
+                                    <div class="lower-content">
+                                        <div class="category" *ngIf="post._embedded?.['wp:term']?.[0]?.length">
+                                            <span *ngFor="let cat of post._embedded['wp:term'][0]; let i = index">
+                                                {{ cat.name }}<span
+                                                    *ngIf="i < post._embedded['wp:term'][0].length - 1">, </span>
+                                            </span>
+                                        </div>
+
+                                        <div class="author-box">
+                                            <div class="box-inner">
+                                                <div class="author-image">
+                                                    <img src="images/16.jpeg" loading="lazy" alt="">
+                                                </div>
+                                                by <span [innerHTML]="post._embedded?.author[0]?.name"></span>
+
+                                            </div>
+                                        </div>
+                                        <a [routerLink]="['/', post.slug]">
+                                            <h3 [innerHTML]="post.title.rendered"></h3>
+                                        </a>
+                                        <div class="text">
+                                            <div [innerHTML]="post.excerpt.rendered"></div>
+                                        </div>
+                                        <ul class="post-meta">
+                                            <li><span class="icon fa fa-calendar"></span>24th March 2022</li>
+                                            <div class="buttonsser">
+                                                <a routerLink="/courses" routerLinkActive="active"> See All Courses</a>
+                                                <a routerLink="/book-a-session-with-kenny-weiss" routerLinkActive="active"> Book a Session
+                                                    with Kenny Weiss</a>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <pagination-controls class="blogpagination" (pageChange)="page = $event"></pagination-controls>
+
+                    </div>
+                    <div class="blog-rightside" >
+                        <aside class="sidebar sticky-top" >
+                            <div class="sidebar-widget-two about-widget">
+                                <div class="widget-content">
+                                    <div class="sidebar-title-two">
+                                        <h4> About Me </h4>
+                                    </div>
+                                    <div class="image">
+                                        <img src="images/16.jpeg" loading="lazy" alt="">
+                                    </div>
+                                    <div class="lower-content">
+                                        <h6>Kenny Weiss</h6>
+                                        <div class="text">
+                                            <p>Kenny Weiss believes if he is going to teach it, he must first live it
+                                                and learn from it.</p>
+                                        </div>
+                                        <ul class="social-box">
+                                            <li><a target="_blank" href="https://www.facebook.com/kennyweiss.net"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                            <li><a target="_blank" href="https://www.instagram.com/kennyweiss.kw"><i class="fa-brands fa-instagram"></i></a></li>
+                                            <li><a target="_blank" href="https://www.linkedin.com/in/coachkennyweiss"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                            <li><a target="_blank" href="https://www.youtube.com/channel/UC5eK9c7LRJoK6NW52nlythw"><i class="fa-brands fa-youtube"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="sidebar-widget-two about-widget">
+                                <div class="widget-content">
+                                    <div class="sidebar-title-two">
+                                        <h5>Search Here</h5>
+                                    </div>
+
+                                    <div class="sidebar-widget search-box">
+                                        <form method="post" action="contact.html">
+                                            <div class="form-group">
+                                                <input type="search" name="search-field" value=""
+                                                    placeholder="Search your keyword..." required="">
+                                                <button type="submit"><span class="icon fa fa-search"></span></button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div> -->
+                       
+
+                            <div class="sidebar-widget-two add-widget">
+                                   <div class="contact-box">
+                                <div class="shine-effect canter-content">
+                                    <img src="images/15.jpeg" loading="lazy" alt="Contact">
+
+                                    <div class="img-contant">
+                                          <h5>Have any questions?</h5>
+                                        <div class="button-row">
+                                        <a routerLink="/book-a-session-with-kenny-weiss" class="button">
+                                            book a call with Kenny <span class="arrow"><i
+                                                    class="fa-solid fa-arrow-right"></i></span>
+                                        </a>
+                                      
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>

@@ -1,0 +1,112 @@
+<main class="mt">
+    <div class="contactsection">
+
+        <div class="container">
+            <div class="contact-into">
+                <h5 class="tag-line">Contact us</h5>
+                <h3>Let’s Start Your Healing <br>Journey Together</h3>
+            </div>
+            <div class="contactflexform">
+                <div class="leftcontactimg">
+                    <img src="images/11.jpeg">
+                </div>
+
+                <div class="form">  
+    <div *ngIf="formSuccess" class="success-message">
+        Thank you! Your message has been sent successfully.
+    </div>
+
+    <form *ngIf="!formSuccess" #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)">
+
+        <div class="row">
+            <div class="contactfiled">
+            <input type="text" placeholder="First Name" name="name" [(ngModel)]="formData.name" required
+                #name="ngModel" />
+            <div *ngIf="(formSubmitted || name.touched) && name.invalid" class="error">
+                First Name is required
+            </div>
+</div>
+ <div class="contactfiled">
+            <input type="text" placeholder="Last Name" name="lastname" [(ngModel)]="formData.lastname" required
+                #lastname="ngModel" />
+            <div *ngIf="(formSubmitted || lastname.touched) && lastname.invalid" class="error">
+                Last Name is required
+            </div>
+        </div>
+</div>
+
+        <div class="row my-2">
+             <div class="contactfiled">
+            <input type="email" placeholder="E-mail Address" name="email" [(ngModel)]="formData.email"
+                required email #email="ngModel" />
+            <div *ngIf="(formSubmitted || email.touched) && email.invalid" class="error">
+                A valid Email is required
+            </div>
+</div>
+  <div class="contactfiled">
+            <input type="tel" placeholder="Phone Number" name="phone" [(ngModel)]="formData.phone" required
+                #phone="ngModel" />
+            <div *ngIf="(formSubmitted || phone.touched) && phone.invalid" class="error">
+                Phone is required
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+              <div class="contactfiled">
+            <textarea rows="5" placeholder="Message" name="message" [(ngModel)]="formData.message" required
+                #message="ngModel"></textarea>
+            <div *ngIf="(formSubmitted || message.touched) && message.invalid" class="error">
+                Message is required
+            </div>
+            </div>
+        </div>
+
+        <!-- Keep button always enabled to let validation errors show -->
+         <div class=" buttoncontactcenter">
+                    <button class="button" type="submit">Send Message</button>
+                    </div>
+
+    </form>
+</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="container">
+
+
+            <div class="contact-boxesflex">
+                <div class="contacts-box">
+                    <div class="iconcontact">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Email</h4>
+                        <a href="#">kw&#64;kennyweiss.net</a>
+                    </div>
+                </div>
+ 
+                <div class="contacts-box">
+                    <div class="iconcontact">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h4>Schedule</h4>
+                        <p>Mon. - Thursday - 7AM - 5 PM</p>
+                    </div>
+                </div>
+
+
+            </div>
+        
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.599017888304!2d-111.9265386!3d33.3815331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0f5f7b49accd%3A0x7e8c21f143a1b5cc!2sKenny%20Weiss%20%E2%80%93%20Life%20Coach!5e0!3m2!1sen!2sin!4v1755062396993!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </div>
+
+</main>

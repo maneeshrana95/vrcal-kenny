@@ -1,0 +1,78 @@
+<div *ngIf="loading" class="loader-maim"> 
+<div class="hm-spinner"></div>
+</div>
+<main   class="pt-1 blogdetailspage"  *ngIf="post">
+        <div class="bg-gry colorlink">
+            <div class="container">
+                <div class="grid2"> 
+                    <!-- Main Content -->
+                    <div class="main-content">
+                        <div class="shine-effect">
+                            <div class="imghigh">
+                                 <!-- Agar featured image ho -->
+ <img *ngIf="featuredImage" 
+     [src]="featuredImage" 
+     alt="{{ post.title?.rendered }}" 
+     loading="lazy"  
+     class="course-details-img"> 
+
+                            </div>
+                        </div>
+                        <div class="meta by-admin">
+                            <span><i class="fa-regular fa-calendar"></i>  </span>
+                            <span><i class="fa-regular fa-user"></i>By: {{ post._embedded?.author[0]?.name }}</span>
+                        </div>
+                       <h1 [innerHTML]="post.title.rendered"></h1> 
+                         <div [innerHTML]="post.content.rendered | embedYoutube"></div>
+ 
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <div class="position-sticky">
+                            <div class="contact-box">
+                                <div class="shine-effect canter-content">
+                                    <img src="images/15.jpeg" loading="lazy" alt="Contact">
+
+                                    <div class="img-contant">
+                                        <h5>Have any questions?</h5>
+                                                       <div class="button-row">
+                                        <a routerLink="/book-a-session-with-kenny-weiss" class="button">
+                                            book a call with Kenny <span class="arrow"><i
+                                                    class="fa-solid fa-arrow-right"></i></span>
+                                        </a>
+                                      
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray courses-master-classes">
+            <div class="container">
+               <app-course-slider/>
+            </div>
+            </div>
+           <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                   <h3>Voices of Transformation</h3>
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                    <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+        </div>
+    </main>

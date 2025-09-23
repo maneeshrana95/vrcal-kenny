@@ -1,0 +1,25 @@
+<div #emotionalSwiper class="swiper emotional-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let hservice of healservices">
+      <div class="wellness-col bb-1">
+        <div class="childhoodimg">
+                                     <a [routerLink]="['/coaching', hservice.slug]"> 
+  <!-- Agar featured image ho -->
+  <img *ngIf="!hservice.courseImage && hservice.featuredImage" 
+       [src]="hservice.featuredImage" 
+       alt="{{ hservice.title?.rendered }}" 
+       loading="lazy"> </a>
+        </div>
+        <div class="trauma">
+          <h2 [innerHTML]="hservice.title.rendered"></h2> 
+           <div [innerHTML]="hservice.excerpt.rendered"></div>
+          <a class="more-link button" [routerLink]="['/coaching', hservice.slug]">Read more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+

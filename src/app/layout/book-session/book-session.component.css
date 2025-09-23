@@ -1,0 +1,16 @@
+.hidden-until-load {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main {
+  transition: opacity 0.5s ease-in;
+}
+
+main:not(.hidden-until-load) {
+  opacity: 1;
+  pointer-events: auto;
+}
+.clendly{
+    overflow: hidden;
+}

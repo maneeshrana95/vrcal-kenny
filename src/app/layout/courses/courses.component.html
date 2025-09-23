@@ -1,0 +1,101 @@
+
+<!-- Loader -->
+<div *ngIf="loading" class="loader-maim"> 
+<div class="hm-spinner"></div>
+</div>
+
+
+
+<main  class="mt pt-4" *ngIf="!loading">
+ <div *ngIf="services?.length">
+    <section class="sourses-section">
+        <div class="container course-heading">
+            <h5 class="tag-line">Learn from me</h5>
+            <h3>Courses and Master Classes</h3>
+        </div>
+
+        <div class="container ">
+<div class="courseslistitemsdd">
+     <div *ngFor="let service of services  let i = index; let odd = odd; let even = even"
+    [ngClass]="{ 'odd-class': odd, 'even-class': even }">
+            <div class="flex-who-we-are mb-3">
+                <!-- Left Side Images -->
+                <div class="left-images">
+                    <div class="main-img">
+                        <a [routerLink]="['/courses', service.slug]" >
+                      <img *ngIf="service.featuredImage" [src]="service.featuredImage" [alt]="service.title.rendered" loading="lazy" />
+                    </a>
+                    </div> 
+                </div>
+
+                <!-- Right Side Content -->
+                <div class="right-content">
+                     <a [routerLink]="['/courses', service.slug]" >
+                        <h2 [innerHTML]="service.title.rendered"></h2>
+                     </a>
+                    
+                    <div class="pricing-set">
+                        <h4 class="price2">$ {{ service.acf?.price }}</h4>
+                        <h4>Course • By Kenny Weiss</h4>
+                    </div>
+                     <div class="description">{{ service.acf?.banner_desc }}</div> 
+                 
+                      <a [routerLink]="['/courses', service.slug]" class="button w-7">Enroll now</a> 
+                       
+                </div>
+            </div>
+</div>
+</div>
+        </div>
+
+    </section>
+
+
+
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                     <h3>Voices of Transformation</h3>
+                    <!-- <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p> -->
+
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                    <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="podcastvideos">
+        <div class="container">
+            <div class="videotestiomonials">
+               <h3>Voices of Transformation</h3>
+                <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p>
+            </div>
+
+            <div class="videorow">
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/OLDAWv1EZx" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/4Rbd6v4KLv" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</main>

@@ -1,0 +1,19 @@
+<div class="faq-wrapper blog-detailsdhidee">
+  <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+    <div 
+      class="question" 
+      [class.active]="faq.open" 
+      (click)="toggleFAQ(i)">
+      {{ faq.question }}
+    </div>
+    <div 
+      class="answercont" 
+      [style.maxHeight]="faq.open ? '1000px' : '0'" 
+      [style.overflow]="'hidden'" 
+      [style.transition]="'max-height 0.3s ease'">
+      <div class="answer">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+</div>

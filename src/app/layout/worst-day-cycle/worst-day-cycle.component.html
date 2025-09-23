@@ -1,0 +1,133 @@
+ <main class="mt">
+        <section class="wordsendsicyel">
+            <div class="container">
+                <div class="flexwordsendcycal">
+                    <div class="left-wordsendcycal">
+                        <h1>Worst Day Cycle</h1>
+                        <p>For centuries society has stigmatized, and science has incorrectly downplayed, the
+                            importance of emotions. Unfortunately, these factors have resulted in humans developing
+                            an emotionally self-destructive survival process to absorb the childhood injuries we
+                            all experience from perfectly imperfect caregivers. I call this process The Worst Day
+                            Cycle.</p>
+                    </div>
+                    <div class="right-wordsendcycal">
+                        <img src="images/worst-day-cycle.png"  class="cycle2" loading="lazy" alt="">
+                        <img src="images/worst-day-text.png" class="worst-day-text" loading="lazy" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+ 
+        <div class="section-wrapper">
+            <div class="container">
+                <div class="flex-inwrapper notorder">
+                    <div class="content" data-aos="fade-up" data-aos-duration="100">
+                        <h3>The Replay: Cycle of Shame</h3>
+
+                        <p class="desc">The overwhelming emotional experience of childhood injury, loss of inherent
+                            power, and adoption of a false persona create a fear-based traumatic emotional chemical
+                            addiction in the brain and body of each child.</p>
+
+                        <p class="desc">This emotional addiction becomes a mostly subconscious shame-based compulsion to
+                            replay the unhealed childhood injuries resulting in each adult relationship/s, career/s, and
+                            health outcome/s mirroring the original childhood emotional injury the individual has yet to
+                            heal.</p>
+
+                        <p class="desc">A person does this to regain their lost power (they are now in control of doing
+                            it to themselves) and as a way to let themselves know they need to heal the pain from the
+                            past so they can reclaim their authentic self.</p>
+
+                        <p class="desc">Sadly, the individual will deny their part because both society and science have
+                            not made them aware of the role they are playing in creating their emotional misery.</p>
+
+                        <p class="desc">Successfully conquering <span class="bolder">The Worst Day Cycle </span>
+                            requires healing the shame and
+                            facing this denial by developing <a class="bolder" routerLink="/courses">Emotional Authenticity.</a>
+
+                        </p>
+
+                        <p class="desc">In doing so, the individual reclaims their authentic self by healing the pain
+                            from the past and discovering the ability to forgive their caregivers and themselves for
+                            their part in their life difficulties.
+
+                        </p> 
+
+                    </div>
+
+                    <div class="images">
+                        <div class="img1"><img src="images/1.jpeg" alt="Group Coaching" loading="lazy"></div>
+                        <div class="img2"><img src="images/15.jpeg" alt="Workshop Session" loading="lazy"></div>
+                        <div class="decor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="replay-section" data-aos="fade-up" data-aos-duration="100">
+            <div class="container">
+ 
+                <!-- Section 2 -->
+                <div class="vertyvery-box">
+                    <h3>Your Journey to Success</h3>
+                    <p>
+                        The end result is the creation of a new self-empowering emotional chemical addiction that
+                        embraces those perfect imperfections.
+                    </p>
+                    <p>
+                        The resulting wisdom allows individuals to reach their full potential and operate in their
+                        destiny.
+                    </p>
+                    <p>
+                        Most importantly, the deep connection and acceptance they longed for are achieved—even if their
+                        caregivers never participate in the healing.
+                    </p>
+                    <img class="form-bac" src="images/form-bac.png">
+                </div>
+            </div>
+        </section>
+
+        <section class="book-post">
+            <div class="container">
+                <div class="booklistblog">
+
+                    <div class="bookcard" *ngFor="let wdcpost of wdcposts" data-aos="fade-up" data-aos-duration="100">
+                        <div class="bookcardimg">
+                              <a  [routerLink]="['/worst-day-cycle', wdcpost.slug]"> 
+                                <!-- Agar featured image ho -->
+                            <img *ngIf="wdcpost.featuredImage" [src]="wdcpost.featuredImage" [alt]="wdcpost.title.rendered" loading="lazy" />
+                                    </a>
+                        </div>
+                        <div class="bookcardbody">
+                            <a  [routerLink]="['/worst-day-cycle', wdcpost.slug]"> 
+                            <h4 [innerHTML]="wdcpost.title.rendered">How To Heal The Worst Day Cycle- Part 1</h4>
+</a>
+                            <div class="info">
+                                <div><i class="fa-solid fa-calendar-days"></i> May 14, 2022</div>
+                                <div><i class="fa-solid fa-user-tie"></i> Worst Day Cycle</div>
+                            </div> 
+                              <div class="ptext" [innerHTML]="getShortContent(wdcpost.excerpt?.rendered || wdcpost.content?.rendered, 15) "></div>
+                            <div class="author">
+                                <div>
+                                    <img src="images/author.png" alt="Author" loading="lazy">
+                                    <div class="author-info">
+                                        <span>By : Kenny Weiss</span> 
+                                    </div>
+                                </div>
+                                <a  [routerLink]="['/worst-day-cycle', wdcpost.slug]" class="button abslut">
+                                    Read More <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+  
+
+
+
+                </div>
+            </div>
+        </section>
+ 
+
+    </main>

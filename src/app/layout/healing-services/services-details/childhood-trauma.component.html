@@ -1,0 +1,271 @@
+<div *ngIf="loading" class="loader-maim">
+    <div class="hm-spinner"></div>
+</div>
+<main class="mt emonastiolser " *ngIf="!loading">
+    <section id="top0" class="kanny-content" >
+        <div class="container">
+            <div class="contentallkanny">
+                  <img class="form-bac" src="images/form-bac.png" loading="lazy" alt=""> 
+                <h1>{{ service.acf?.as_parent_heading }}</h1>
+                <div [innerHTML]="service.acf?.intro_discription"></div>
+
+                <a class="button" routerLink="/book-a-session-with-kenny-weiss">{{ service.acf?.intro_button }}</a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="who-we-are">
+        <div class="container ">
+            <div class="flex-who-we-are">
+                <div class="left-images">
+                    <div class="main-img">
+                        <img *ngIf="cardImage1" [src]="cardImage1" alt="Woman on computer">
+                    </div>
+                </div>
+
+                <div class="right-content listingdse" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 class="h3">{{ service.acf?.healing__service_card_one_heading}}</h1>
+                    <div class="b" [innerHTML]="service.acf?.real_people_content"></div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="might-feel">
+        <div class="container">
+            <div class="headinginfo">
+                <h3>{{ service.acf?.healing_comparison_main_heading }}</h3>
+                <p>{{ service.acf?.healing_comparison_conetnt }}</p>
+            </div>
+            <div class="might-feel-row  mb-4">
+                <div class="might-feel-col1">
+                    <h4>{{ service.acf?.healing_comparison_left_heading }}</h4>
+
+                    <div [innerHTML]="service.acf?.healing_comparison_left_list_content"></div>
+
+
+                </div>
+                <div class="might-feel-col2">
+                    <h4>{{ service.acf?.healing_comparison_right_heading }}</h4>
+                    <div [innerHTML]="service.acf?.healing_comparison_right_content"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container"  *ngIf="service.acf?.healing_comparison_main_heading2 || service.acf?.healing_comparison_left_heading2 || service.acf?.healing_comparison_left_list_content2 || service.acf?.healing_comparison_right_heading2 || service.acf?.healing_comparison_right_content2 ">
+            <div class="headinginfo">
+                <h3>{{ service.acf?.healing_comparison_main_heading2 }}</h3>
+            </div>
+            <div class="might-feel-row  mb-4">
+                <div class="might-feel-col1">
+                    <h4>{{ service.acf?.healing_comparison_left_heading2 }}</h4>
+
+                    <div [innerHTML]="service.acf?.healing_comparison_left_list_content2"></div>
+
+
+                </div>
+                <div class="might-feel-col2">
+                    <h4>{{ service.acf?.healing_comparison_right_heading2 }}</h4>
+                    <div [innerHTML]="service.acf?.healing_comparison_right_content2"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="about-banner">
+        <div class="container">
+            <div class="flex-about">
+                <div class="left-about" data-aos="fade-up" data-aos-duration="1500">
+                    <h5 class="tag-line">Brain Adapted</h5>
+                    <h3>{{ service.acf?.healing_service_card_tow_heading }}</h3>
+                    <div [innerHTML]="service.acf?.healing_service_card_tow_content"></div>
+
+                </div>
+                <div class="right-about">
+                    <div class="about-right-img">
+                        <img *ngIf="cardImage2" [src]="cardImage2" class="imagedesign" />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="who-we-are">
+        <div class="container ">
+            <div class="flex-who-we-are">
+                <div class="left-images">
+                    <div class="main-img">
+                        <img *ngIf="cardImage3" [src]="cardImage3" alt="Woman on computer">
+                    </div>
+                </div>
+
+                <div class="right-content aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                    <h3>{{ service.acf?.healing_service_card_three_heading }}</h3>
+                    <div [innerHTML]="service.acf?.healing_service_card_three_content"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="healing-table">
+        <div class="container">
+            <div class="headinginfo">
+                <h3>{{ service.acf?.choose_the_path_table_heading }}</h3>
+            </div>
+
+            <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+                <thead>
+                    <tr>
+                        <th>
+                            <p class="b">Step You Can Take</p>
+                        </th>
+                        <th>
+                            <p class="b">What You’ll Gain</p>
+                        </th>
+                        <th>
+                            <p class="b">Action</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="b">📘 Read the Book</p>
+                        </td>
+                        <td>Learn how emotional cycles form and how to break them</td>
+                        <td><a class="button" routerLink="/books-by-kenny-weiss">Get the Book</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="b">🎓 Take a Course</p>
+                        </td>
+                        <td>Step-by-step emotional healing from the comfort of your home</td>
+                        <td><a class="button" routerLink="/courses">Explore Courses</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="b">🤝 Book a Session</p>
+                        </td>
+                        <td>Book a Session with Kenny directly to understand what’s right for you</td>
+                        <td><a class="button" routerLink="/book-a-session-with-kenny-weiss">Book a Session</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>{{ service.acf?.choose_the_path_content }}</p>
+
+
+
+        </div>
+    </div>
+
+
+    <section class="postcard">
+        <div class="container">
+            <div class="postcard-row">
+                <div class="postcard-item1">
+                    <img *ngIf="postcardImage1" [src]="postcardImage1" />
+                </div>
+                <div class="postcard-item2 wording">
+                    <h2>{{ service.acf?.post_card_one_heading }}</h2>
+                    <div [innerHTML]="service.acf?.post_card_one_content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-banner"
+    *ngIf="postcardImage2 || postcardicfImage || service.acf?.post_card_tow_heading || service.acf?.post_card_tow_content_list"
+    >
+        <div class="container">
+            <div class="flex-about">
+                <div class="left-about aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
+                    <h5 class="tag-line">About Freedom</h5>
+                    <h3>{{ service.acf?.post_card_tow_heading }}</h3>
+
+                    <div class="video-box-row blockvider">
+                        <div [innerHTML]="service.acf?.post_card_tow_content_list"></div>
+
+                        <a class="button" [href]="service.acf?.post_card_tow_button_link?.url">{{
+                            service.acf?.post_card_tow_button_text }}</a>
+                    </div>
+
+                </div>
+                <div class="right-about">
+                    <div class="about-right-img">
+                        <img class="imagedesign" *ngIf="postcardImage2" [src]="postcardImage2" alt="">
+
+                        <div class="rightdesigncontent">
+                            <img *ngIf="postcardicfImage" [src]="postcardicfImage" alt="">
+                            <h5>Certified Life Coach</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                     <h3>Voices of Transformation</h3>
+                    <!--<p>Hear from clients who turned their struggles into strength with Kenny’s support.</p> -->
+
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                    <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+ <section class="podcastvideos">
+        <div class="container">
+            <div class="videotestiomonials">
+               <h3>Voices of Transformation</h3>
+                <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p>
+            </div>
+
+            <div class="videorow">
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/OLDAWv1EZx" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/4Rbd6v4KLv" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>

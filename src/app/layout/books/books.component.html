@@ -1,0 +1,556 @@
+<main class="mt">
+
+    <section class="book-section page">
+        <div class="container">
+            <div class="book-banner">
+                <div class="book-col1">
+                    <img src="images/books.jpg" loading="lazy" alt="">
+
+                </div>
+                <div class="book-col2" data-aos="fade-up" data-aos-duration="100">
+                    <h1>Your Journey to Being Yourself Book</h1>
+                    <p>Introducing “Your Journey to Being Yourself” – my new book that’s as hard-hitting as it is
+                        transformative.
+                        <br>
+                        This book will revolutionize the way you think about emotions and how to heal your past
+                        pain.
+                        <br>
+                        Get ready to reconnect with your authentic self.
+                        <br>
+                        Available now!
+                    </p>
+                    <div class="button-row">
+                        <a class="button" target="_blank" href="https://amzn.to/3U1IGNZ">Available Now on Amazon</a>
+                        <a class="button while" target="_blank"
+                            href="https://www.barnesandnoble.com/w/book/1144344669?ean=9798218311940">Available Now
+                            at Barnes &amp; Noble</a>
+                    </div>
+                    <div class="formcontainerrow">
+                        <p class="ber">Download a Free Preview</p>
+                             <div *ngIf="formSuccessBooks" class="success-message">
+                                    Thank you! Your message has been sent successfully.
+                                </div>
+                               <form  *ngIf="!formSuccessBooks" #contactForm="ngForm" (ngSubmit)="submitFormBooks()">  
+                        <div class="formcontainer">
+                            <div class="flexingform">
+                            <input type="text" name="name" placeholder="First Name*"[(ngModel)]="formData.name" required #name="ngModel"/>
+                                            <div *ngIf="(formSubmitted || name.touched) && name.invalid"
+                                                class="error">
+                                                A valid Email is required
+                                            </div>
+                                            </div>
+                                     <div class="flexingform">      
+                            <input type="email" placeholder="Email*" name="email" [(ngModel)]="formData.email" required email #email="ngModel" />
+                                            <div *ngIf="(formSubmitted || email.touched) && email.invalid"
+                                                class="error">
+                                                A valid Email is required
+                                            </div>
+                                            </div>  
+                            <button class="button submit-btn">Submit</button>
+                        </div>
+                        </form>
+                        <p>“Your Journey to Being Yourself” also includes a list of resources gathered just for you
+                            and accessible by links included in the book. Order your copy now!
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <!--------------------------->
+
+    <div class="card-section">
+        <div class="container">
+            <div class="card-row" data-aos="fade-up" data-aos-duration="100">
+                <div class="card-content-grey-bg">
+                    <h2>Your Journey to Success:</h2>
+                    <p>Kenny Weiss reveals strategies that will teach you exactly how to break through the pain of
+                        your past, forgive yourself for your imperfections, master your emotions, and see your life
+                        from a new perspective. Whether you are dealing with stress, fear, anxiety, depression,
+                        self-sabotage, parenting, parental alienation, dysfunctional families, childhood abuse and
+                        trauma, childhood emotional neglect, inner child healing, shame, poor mental health, poor
+                        emotional health, shadow work, toxic relationships, codependence, setting boundaries, poor
+                        communication skills, addiction, narcissist recovery, a lack of purpose, mid-life
+                        management, career issues, or wanting more happiness, motivation, mindfulness and the
+                        ability to live in your authentic self, this book is for you.
+                    </p>
+                    <div class="button-row">
+                        <a class="button" target="_blank"
+                            href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=pd_bxgy_thbs_d_sccl_1/132-0708785-7014928?pd_rd_w=CfSq4&content-id=amzn1.sym.dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_p=dcf559c6-d374-405e-a13e-133e852d81e1&pf_rd_r=ZRMZB2TSRDBJ8SH47VR0&pd_rd_wg=rtzAf&pd_rd_r=e5cf0ae3-3835-4720-a77f-4588fa9681ba&pd_rd_i=1981471014&psc=1">Available
+                            Now on Amazon</a>
+                        <a class="button border-only" target="_blank"
+                            href="https://www.barnesandnoble.com/w/your-journey-to-success-kenny-weiss/1127688967?ean=9781981471010">Available
+                            Now at Barnes &amp; Noble</a>
+                    </div>
+                </div>
+
+                <div class="card-image-grey-bg">
+                    <img src="images/book-success.webp" loading="lazy" alt="" class="image-c">
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!----------------------------->
+
+    <section class="realpandemic">
+        <div class="container">
+            <div class="flexrealpandemic">
+                <div class="left-realpandemic">
+                    <div class="main-img">
+                        <img src="images/1.jpeg" loading="lazy" alt="Woman on computer">
+                    </div>
+                    <div class="video-boxes">
+                        <img src="images/books.jpg" loading="lazy" alt="Video thumbnail">
+                        <a target="_blank" id="play-video" class="video-play-button"
+                            href="https://youtu.be/a1udGRR63OA?si=D7Iddfp5ezrC8jTJ" data-toggle="modal"
+                            data-target="#savoybeachhotel">
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="rigth-realpandemic" data-aos="fade-up" data-aos-duration="200">
+                    <h3>The Real Pandemic</h3>
+                    <p class="description">I believe denial and
+                        self-deception have created the single most
+                        destructive pandemic on the
+                        planet today. There’s no other human process or
+                        event that has systematically destroyed more
+                        relationships, infected more governments, or
+                        ruined more people over countless generations
+                        without its existence being acknowledged and
+                        there have been few efforts to address it.
+                    </p>
+                    <p class="description">Denial has been the bane of
+                        society for centuries, and because it denies
+                        its own existence,
+                        few are aware of it, considering it, or talking
+                        about it. It’s a disease we all suffer from.
+                        Just consider, studies show that we all lie to
+                        ourselves, on average, between ten and two
+                        hundred times each day about little things,
+                        like:</p>
+
+                    <div class="fucherserlist">
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling someone you’re fine when
+                                    you’re in pain.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling someone you failed to text
+                                    them because you were busy.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling someone part of a story but
+                                    not the whole story.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling yourself, “This cookie won’t
+                                    affect my diet.”</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling yourself, “It’s only a couple
+                                    of drinks.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling yourself, “I can do that
+                                    tomorrow.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling yourself, “I deserve it” when
+                                    you break your personal boundaries.
+
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon"><span><i class="fa-solid fa-check"></i></span></div>
+                            <div class="feature-text">
+                                <p>Telling yourself, “It wasn’t
+                                    flirting. I was just being
+                                    friendly.”
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="button-row">
+                        <a class="button" target="_blank" href="https://amzn.to/3U1IGNZ">Available Now on Amazon</a>
+                        <a class="button " target="_blank"
+                            href="https://www.barnesandnoble.com/w/book/1144344669?ean=9798218311940">Available Now
+                            at Barnes &amp; Noble</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="who-we-are">
+        <div class="container ">
+            <div class="flex-who-we-are sticky">
+
+                <div class="right-content" data-aos="fade-up" data-aos-duration="200">
+                    <h5 class="tag-line">WHO WE ARE</h5>
+                    <h3>Recommended Books on Emotional Healing & Self-Development</h3>
+                    <div class="et_pb_text_inner">
+                        <p>How Emotions Are Made – <a href="https://amzn.to/38p2JQJ" target="_blank" rel="noopener">Buy
+                                the Paperback</a> or <a href="https://amzn.to/3M7YHuT" target="_blank"
+                                rel="noopener">Buy the Audiobook</a> – Lisa Feldman Barret</p><br>
+
+                        <p>The Master and His Emissary – <a href="https://amzn.to/3w3vP13" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3w4ZDuv"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Ian Mcghilchrist</p><br>
+
+                        <p>Spy the Lie: Buy the&nbsp; – <a href="https://amzn.to/3RjwSVR">Buy</a><span><a
+                                    href="https://amzn.to/3RjwSVR">&nbsp;the Paperback</a> or <a
+                                    href="https://amzn.to/3RjwSVR">Buy the Audiobook</a> – Philip Houston</span></p><br>
+
+                        <p><span>The Tapping Solution – <a href="https://amzn.to/3tfZfdG">Buy the Paperback</a> or <a
+                                    href="https://www.amazon.com/The-Tapping-Solution-Nick-Ortner-audiobook/dp/B00C1UBT2U">Buy
+                                    the Audiobook</a> – Nick Ortner</span></p><br>
+
+                        <p>In an Unspoken Voice – <a href="https://amzn.to/3L4CTyI">Buy the Paperback</a> or <a
+                                href="https://amzn.to/39GV54v">Buy the Audiobook</a> – Peter Levine</p><br>
+
+                        <p>Trauma and Memory – <a href="https://amzn.to/39fbHjP">Buy the Paperback</a> or <a
+                                href="https://amzn.to/3w2ixBT">Buy the Audiobook</a> – Peter Levine</p><br>
+
+                        <p>Waking the Tiger – <a href="https://amzn.to/3ylARHt" target="_blank" rel="noopener">Buy the
+                                Paperback</a> or <a href="https://www.amazon.com/Waking-Tiger-audiobook/dp/B01LZKDSNZ"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Peter Levine</p><br>
+
+                        <p>Complex Ptsd: From Surviving to Thriving – <a href="https://amzn.to/3N5MIy2">Buy the
+                                Paperback</a> or <a href="https://amzn.to/3PejjDr">Buy the Audiobook</a> – Pete Walker
+                        </p><br>
+
+                        <p>In the Realm of Hungry Ghosts – <a href="https://amzn.to/3NabxIT">Buy the Paperback</a> or <a
+                                href="https://amzn.to/38jh7Kp">Buy the Audiobook</a> – Gabor Maté</p><br>
+
+                        <p>When the Body Says No – <a href="https://amzn.to/3stydfu" target="_blank" rel="noopener">Buy
+                                the Paperback</a> or <a href="https://amzn.to/3yutL3L" target="_blank"
+                                rel="noopener">Buy the Audiobook</a> – Gabor Maté</p><br>
+
+                        <p>Scattered Minds – <a href="https://amzn.to/38jhDIl" target="_blank" rel="noopener">Buy the
+                                Paperback</a> – Gabor Maté</p><br>
+
+                        <p>Hold on to Your Kid – <a href="https://amzn.to/3N5Nviu" target="_blank" rel="noopener">Buy
+                                the Paperback</a> or <a href="https://amzn.to/3wdoxGQ" target="_blank"
+                                rel="noopener">Buy the Audiobook</a> – Gabor Maté and Gordon Neufeld</p><br>
+
+                        <p>Healing the Shame that Binds You – <a href="https://amzn.to/3yvln40" target="_blank"
+                                rel="noopener">Buy the Paperback</a> – John Bradshaw</p><br>
+
+                        <p>Molecules of Emotion: Why You Feel the Way You Feel – <a href="https://amzn.to/3M983q0">Buy
+                                the Paperback</a> or <a href="https://amzn.to/3L5pLJZ" target="_blank"
+                                rel="noopener">Buy the Audiobook</a> – Candace B. Pert Ph.D.</p><br>
+
+                        <p>The Emotionally Abusive Relationship – <a href="https://amzn.to/3PdupZx" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3ywJDmu"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Beverly Engel</p><br>
+
+                        <p>The Verbally Abusive Man, Can He Change? – <a href="https://amzn.to/3L4wbsJ" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3PfFFo8"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Patricia Evans</p><br>
+
+                        <p>The Emotional Incest Syndrome: What to Do When a Parent’s Love Rules Your Life – <a
+                                href="https://amzn.to/3FCro0p" target="_blank" rel="noopener">Buy the Paperback</a> or
+                            <a href="https://amzn.to/39aNaMC" target="_blank" rel="noopener">Buy the Audiobook</a> – Dr.
+                            Patricia Love</p><br>
+
+                        <p>Evolve Your Brain: The Science of Changing Your Mind – <a href="https://amzn.to/3wfxeAC"
+                                target="_blank" rel="noopener">Buy the Paperback</a> or <a
+                                href="https://amzn.to/3w1EelO" target="_blank" rel="noopener">Buy the Audiobook</a> –
+                            Joe Dispenza</p><br>
+
+                        <p>Parenting with Love and Logic: Teaching Children Responsibility – <a
+                                href="https://amzn.to/3l6N6QB" target="_blank" rel="noopener">Buy the Hardcover</a> –
+                            Foster Cline + Jim Faye</p><br>
+
+                        <p>Free from Lies: Discovering Your True Needs – <a href="https://amzn.to/3FAzB5e"
+                                target="_blank" rel="noopener">Buy the Paperback</a> – Alice Miller</p><br>
+
+                        <p>The Truth Will Set You Free – <a href="https://amzn.to/37FRSSk" target="_blank"
+                                rel="noopener">Buy the Paperback</a> – Alice Miller</p><br>
+
+                        <p>The Drama of the Gifted Child – <a href="https://amzn.to/39bVWtZ" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3FDiZK0"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Alice Miller</p><br>
+
+                        <p>The Brain that Changes Itself – <a href="https://amzn.to/3FAy5Qx" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3w2YiUI"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Norman Doidge</p><br>
+
+                        <p>Behave: The Biology of Humans at Our Best and Worst – <a href="https://amzn.to/3l1R1hO"
+                                target="_blank" rel="noopener">Buy the Paperback</a> or <a
+                                href="https://amzn.to/3yt3YZS" target="_blank" rel="noopener">Buy the Audiobook</a> –
+                            Robert Sapolsky</p><br>
+
+                        <p>Loving What Is: Four Questions That Can Change Your Life – <a href="https://amzn.to/3FBqq4C"
+                                target="_blank" rel="noopener">Buy the Paperback</a> or <a
+                                href="https://amzn.to/3M7B6ui" target="_blank" rel="noopener">Buy the Audiobook</a> –
+                            Byron Katie</p><br>
+
+                        <p>I Need Your Love – Is That True? – <a href="https://amzn.to/3srC24K" target="_blank"
+                                rel="noopener">Buy the Paperback</a> or <a href="https://amzn.to/3w5W4El"
+                                target="_blank" rel="noopener">Buy the Audiobook</a> – Byron Katie</p><br>
+
+                        <p>The Power of Now – <a href="https://amzn.to/37zhdx4" target="_blank" rel="noopener">Buy the
+                                Paperback</a> or <a href="https://amzn.to/3FDAIRz" target="_blank" rel="noopener">Buy
+                                the Audiobook</a> – Eckhart Tolle</p><br>
+
+                        <p>The Biology of Belief – <a href="https://amzn.to/3hzgnFz" target="_blank" rel="noopener">Buy
+                                the Paperback</a> or <a href="https://amzn.to/3G1w9Cy" target="_blank"
+                                rel="noopener">Buy the Audiobook</a> – Dr. Bruce Lipton</p><br>
+
+                        <p><em>As an Amazon Associate, I earn from qualifying purchases.</em></p><br>
+                    </div>
+
+
+                    <a target="_blank"
+                        href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1580748958&sr=8-1"
+                        class="button mt-3">Buy My Book</a>
+
+
+                </div>
+                <div class="left-images">
+                    <div class="main-img noafter">
+                        <div class="about-right-img">
+                            <img class="imagedesign" src="images/mybook.webp" loading="lazy" alt="">
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="recommended-readinglist" data-aos="fade-up" data-aos-duration="300">
+        <div class="container">
+            <div class="contentrecommended">
+                <h3>Kenny’s Recommended Reading List</h3>
+            </div>
+
+            <div class="flexbooklist">
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/Facing-Codependence.jpeg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://www.amazon.com/Facing-Codependence-Where-Comes-Sabotages/dp/0062505890?_encoding=UTF8&qid=1652278710&sr=8-2&linkCode=sl1&tag=kennyweiss-20&linkId=3bfc6ba977ce007fe3443e8a74caea56&language=en_US&ref_=as_li_ss_tl"
+                            target="_blank">
+                            <h5> Facing Codependence </h5>
+
+                        </a>
+                        <h6>by Pia Mellody</h6>
+                        <p>Pia Mellody is internationally recognized as an expert and authority in codependence,
+                            addiction, and childhood trauma.</p>
+                    </div>
+                    <div class="flexbuttoons">
+                        <a href="https://amzn.to/3l2WBAm" target="_blank" class="button">Buy the Paperback</a>
+                        <a href="https://amzn.to/3Li6nJT" target="_blank" class="button">Buy the Audiobook</a>
+                    </div>
+                </div>
+
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/61mbpAeEUML._SY425_.jpeg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://amzn.to/398Rufl" target="_blank">
+                            <h5> Facing Love </h5>
+
+                        </a>
+                        <h6>by Pia Mellody</h6>
+                        <p>Pia Mellody is internationally recognized as an expert and authority in codependence,
+                            addiction, and childhood trauma.</p>
+                    </div>
+
+                    <div class="flexbuttoons">
+                        <a href="https://amzn.to/398Rufl" target="_blank" class="button">Buy the Paperback</a>
+                        <a href="https://amzn.to/37ArYiP" target="_blank" class="button">Buy the Audiobook</a>
+                    </div>
+                </div>
+
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/718jeatvkkL._SY425_.jpeg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://amzn.to/3w3bp8B" target="_blank">
+                            <h5> The Intimacy Factor </h5>
+
+                        </a>
+                        <h6>by Pia Mellody</h6>
+                        <p>Pia Mellody is internationally recognized as an expert and authority in codependence,
+                            addiction, and childhood trauma. </p>
+                    </div>
+
+                    <div class="flexbuttoons">
+                        <a href="https://amzn.to/3w3bp8B" target="_blank" class="button">Buy the Paperback</a>
+                    </div>
+                </div>
+
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/You-Can-Heal.jpeg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://amzn.to/3wrj8wi" target="_blank">
+                            <h5>You Can heal your Life</h5>
+
+                        </a>
+                        <h6>by Louise Hay</h6>
+                        <p>Louise Hay was a metaphysical teacher and the best-selling author of more than 20 books.
+                        </p>
+                    </div>
+
+                    <div class="flexbuttoons">
+                        <a href="https://amzn.to/3wrj8wi" target="_blank" class="button">Buy the Paperback</a>
+                        <a href="https://amzn.to/3wrj8wi" target="_blank" class="button">Buy the Audiobook</a>
+                    </div>
+                </div>
+
+
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/81ov1l6qBXL._SY425_.jpeg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1580748958&sr=8-1"
+                            target="_blank">
+                            <h5> Your Journey to Success</h5>
+
+                        </a>
+                        <h6>by Kenny Weiss</h6>
+                        <p>Kenny Weiss reveals strategies that will teach you exactly how to break through the pain of your past, forgive yourself for your imperfections, master your emotions, and see your life from a new perspective. 
+                        </p>
+                    </div>
+
+                    <div class="flexbuttoons">
+                        <a href="https://amzn.to/3RjwSVR" target="_blank" class="button">Buy the Paperback</a>
+                        <a href="https://amzn.to/3RjwSVR" target="_blank" class="button">Buy the Audiobook</a>
+                    </div>
+                </div>
+
+
+                <div class="booklisting">
+                    <div class="booklisting-img">
+                        <img src="images/books.jpg" loading="lazy" alt="">
+                    </div>
+                    <div class="booklistcontent">
+                        <a href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1580748958&sr=8-1"
+                            target="_blank">
+                            <h5>Your Journey to Being Yourself </h5>
+
+                        </a>
+                        <h6>by Kenny Weiss</h6>
+                        <p>Introducing “Your Journey to Being Yourself” – my new book that’s as hard-hitting as it is transformative.
+                        </p>
+                    </div>
+
+                    <div class="flexbuttoons">
+                        <a href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1580748958&sr=8-1"
+                            target="_blank" class="button">Buy the Paperback</a>
+                        <a href="https://www.amazon.com/Your-Journey-Success-Answers-Discover/dp/1981471014/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1580748958&sr=8-1"
+                            target="_blank" class="button">Buy the Audiobook</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                     <h3>Voices of Transformation</h3>
+                    <!-- 
+                    <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p> -->
+
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                                        <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+ <section class="podcastvideos">
+        <div class="container">
+            <div class="videotestiomonials">
+               <h3>Voices of Transformation</h3>
+                <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p>
+            </div>
+
+            <div class="videorow">
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/OLDAWv1EZx" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/4Rbd6v4KLv" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>

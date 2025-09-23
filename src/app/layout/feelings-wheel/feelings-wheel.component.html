@@ -1,0 +1,152 @@
+ <main class="mt">
+       <section class="wordsendsicyel">
+            <div class="container">
+                <div class="flexwordsendcycal">
+                    <div class="left-wordsendcycal" data-aos="fade-up" data-aos-duration="1500">
+                        <h3>Feelings Wheel</h3>
+                        <p>The first step in your journey to Emotional
+                            Authenticity and discovering your Greatness is
+                            to get reconnected to your authentic self. The
+                            Feelings Wheel will help you identify how you
+                            are feeling so you can recognize how the
+                            unhealed pain from the past is being relived in
+                            every area of your daily life and keeping you
+                            disconnected from your authentic self. Download
+                            it below to get started.</p>
+
+                        <div class="form">
+                        <div class="contact-into" data-aos="fade-up" data-aos-duration="1500">
+                    <h4>Free Download</h4>
+                    <p>The first step to Emotional Authenticity and discovering your Greatness is to reconnect to your
+                        authentic self. Complete this form for instant access.</p>
+                </div>
+                <div *ngIf="formSuccessFeelingsWheel2" class="success-message">
+                                    Thank you! Your message has been sent successfully.
+                                </div>
+                <form  *ngIf="!formSuccessFeelingsWheel2" #contactForm="ngForm" (ngSubmit)="submitFormFeelingsWheel2()">
+                        <div class="row">
+                        
+<div class="formgruopd">
+                            <input type="text" placeholder="Name"  name="name"    [(ngModel)]="formData.name" required #name="ngModel" />
+                                            <div *ngIf="(formSubmitted || name.touched) && name.invalid" class="error">
+                                                First Name is required</div>
+                                       </div>
+                                       <div class="formgruopd">
+                             <input type="email" name="email"  placeholder="E-mail Address" [(ngModel)]="formData.email" required email #email="ngModel" />
+                                            <div *ngIf="(formSubmitted || email.touched) && email.invalid"
+                                                class="error">
+                                                A valid Email is required
+                                            </div>
+                                            </div>
+                        </div> 
+                        <div class="buttontext-center">
+                            <button class="button" type="submit">Submit</button>
+                        </div>
+                        
+                        </form>
+                    </div>
+                    </div>
+                    <div class="right-wordsendcycal">
+                        <img src="images/feelings-wheel.webp" loading="lazy" alt="feeling-wheel"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="card-section">
+            <div class="container">
+                <div class="card-row green" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card-image-grey-bg">
+                        <img src="images/2.jpeg"  class="image-c" loading="lazy" alt="">
+                    </div>
+                    <div class="card-content-grey-bg">
+                        <h3>Your Journey to Being Yourself</h3>
+                        <p>The first step in your journey to Emotional
+                            Authenticity and discovering your Greatness is
+                            to get reconnected to your authentic self. The
+                            Feelings Wheel will help you identify how you
+                            are feeling so you can recognize how the
+                            unhealed pain from the past is being relived in
+                            every area of your daily life and keeping you
+                            disconnected from your authentic self. Download
+                            it below to get started.</p>
+                        <div class="button-row canter">
+                           <a routerLink="/courses" class="button whitebt">Enroll now</a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-row" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="card-content-grey-bg">
+                        <h3>Feelings Wheel</h3>
+                        <p>The first step in your journey to Emotional
+                            Authenticity and discovering your Greatness is
+                            to get reconnected to your authentic self. The
+                            Feelings Wheel will help you identify how you
+                            are feeling so you can recognize how the
+                            unhealed pain from the past is being relived in
+                            every area of your daily life and keeping you
+                            disconnected from your authentic self. Download
+                            it below to get started.</p>
+                        <div class="button-row canter">  
+                                <a routerLink="/book-a-session-with-kenny-weiss" class="button while"> Book a call with Kenny</a>
+                        </div>
+                    </div>
+
+                    <div class="card-image-grey-bg">
+                        <img src="images/12.jpeg" class="image-c" loading="lazy" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+ 
+         <div class="testimonial-section">
+        <div class="container">
+            <div class="testimonia-row">
+                <div class="testimonial-text">
+                    <h5 class="tag-line">Testimonials</h5>
+                     <h3>Voices of Transformation</h3>
+                    <!-- <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p> -->
+
+                </div>
+
+
+                <div class="swiper testimoalkenny">
+                    <div class="elfsight-app-d6f2f059-cbc8-410e-92ad-2e0c6b5b0a8c" data-elfsight-app-lazy></div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+ 
+  <section class="podcastvideos">
+        <div class="container">
+            <div class="videotestiomonials">
+               <h3>Voices of Transformation</h3>
+                <p>Hear from clients who turned their struggles into strength with Kenny’s support.</p>
+            </div>
+
+            <div class="videorow">
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/OLDAWv1EZx" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                </div>
+
+                <div class="video-sec">
+                    <iframe title="YouTube video player" src="https://player.hotmart.com/embed/4Rbd6v4KLv" width="100%"
+                        height="500" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
