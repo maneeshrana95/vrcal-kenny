@@ -1,19 +1,11 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "dist/angular-headless-wp/server/server.mjs",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/angular-headless-wp/browser/**",
-      "use": "@vercel/static"
-    }
+    { "src": "dist/angular-headless-wp/server/server.js", "use": "@vercel/node" },
+    { "src": "dist/angular-headless-wp/browser/**", "use": "@vercel/static" }
   ],
   "routes": [
-    {
-      "src": "/.*",
-      "dest": "dist/angular-headless-wp/server/server.mjs"
-    }
+    { "src": "/(.*)", "dest": "dist/angular-headless-wp/server/server.js" }
   ]
 }
+

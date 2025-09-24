@@ -1,58 +1,37 @@
+import 'zone.js/node';
+import express from 'express'; // ← default import
+import { join } from 'path';
+import { existsSync } from 'fs';
+import { renderApplication } from '@angular/platform-server';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './src/app/app.component';
+import { config } from './src/app/app.config.server';
 import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr';
-import express from 'express';
-import { fileURLToPath } from 'node:url';
-import { dirname, join, resolve } from 'node:path';
-import bootstrap from './src/main.server';
 
-// Express app
-export function app(): express.Express {
-  const server = express();
- 
-  const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-  const browserDistFolder = resolve(serverDistFolder, '../browser');
-  const indexHtml = join(serverDistFolder, 'index.server.html');
+const distFolder = join(process.cwd(), 'dist/angular-headless-wp/browser'); // Replace <project-name>
+const indexHtml = existsSync(join(distFolder, 'index.html')) ? 'index.html' : 'index.original.html';
 
-  const commonEngine = new CommonEngine();
+export default async function (req: any, res: any) {
+  const app = express();
 
-  server.set('view engine', 'html');
-  server.set('views', browserDistFolder);
+  app.get('*.*', express.static(distFolder, { maxAge: '1y' }));
 
-  // 1️⃣ Serve only static files (CSS, JS, assets)
-  server.get('*.*', express.static(browserDistFolder, {
-    maxAge: '1y',
-  }));
-
-  // 2️⃣ All other routes handled by Angular SSR
-  server.get('**', (req, res, next) => {
-    commonEngine
-      .render({
-        bootstrap,
-        documentFilePath: indexHtml,
-        url: req.originalUrl,
-        publicPath: browserDistFolder,
-        providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }],
-      })
-      .then((html) => res.send(html))
-      .catch((err) => {
-        console.error('SSR rendering error:', err);
-        next(err);
+  app.get('*', async (req, res) => {
+    try {
+      const html = await renderApplication(() =>
+        bootstrapApplication(AppComponent, config), {
+          url: req.url,
+          platformProviders: [
+            { provide: APP_BASE_HREF, useValue: req.baseUrl }
+          ],
+          document: indexHtml
       });
+      res.send(html);
+    } catch (err) {
+      console.error(err);
+      res.status(500).send(err);
+    }
   });
 
-  return server;
-}
-
-// 3️⃣ Start server
-function run(): void {
-  const port = process.env['PORT'] || 4000;
-  const server = app();
-  server.listen(port, () => {
-    console.log(`Node Express server listening on http://localhost:${port}`);
-  });
-}
-
-// Run only if this file is executed directly
-if (process.env['NODE_ENV'] !== 'test') {
-  run();
+  return app(req, res);
 }
